@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 namespace QLThuVien
 {
@@ -46,6 +47,7 @@ namespace QLThuVien
             txtTensv.DataBindings.Add("Text", dgvttttv.DataSource, "TenSV");
             txtdiachisv.DataBindings.Add("Text", dgvttttv.DataSource, "QueQuan");
             txtdt.DataBindings.Add("Text", dgvttttv.DataSource, "SdtSV");
+            Debug.WriteLine("click");
         }
         private void huy_bingding()
         {
@@ -451,6 +453,12 @@ namespace QLThuVien
         private void dgvttttv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            label5.Text = dgvttttv.CurrentRow.Cells["TenSV"].Value.ToString();
+            Debug.WriteLine("data current: "  + dgvttttv.CurrentRow.Cells["TenSV"].Value.ToString());
         }
     }
 }

@@ -347,6 +347,7 @@
             this.label5.Size = new System.Drawing.Size(58, 13);
             this.label5.TabIndex = 0;
             this.label5.Text = "Địa Chỉ SV";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
