@@ -30,6 +30,7 @@ namespace QLThuVien
             hientieudecot();
             hiensvdautien();
             data_bingding();
+            btnin.Visible = false;
         }
         #region hiện thị mã thẻ
         private string taomathe()
@@ -159,7 +160,7 @@ namespace QLThuVien
             cmd.Parameters.Add("@TenSV", ten);
             cmd.Parameters.Add("@GioiTinh", gioitinh);
             cmd.Parameters.Add("@NgaySinh", ngaysinh);
-            cmd.Parameters.Add("@QueQuan", diachi);
+            cmd.Parameters.Add("@diachisv", diachi);
             cmd.Parameters.Add("@DienThoai", dt);
             cmd.Parameters.Add("@NgayTao", ngaytao);
             cmd.Parameters.Add("@NgayHetHan", ngayhethan);
@@ -459,6 +460,11 @@ namespace QLThuVien
         {
             label5.Text = dgvttttv.CurrentRow.Cells["TenSV"].Value.ToString();
             Debug.WriteLine("data current: "  + dgvttttv.CurrentRow.Cells["TenSV"].Value.ToString());
+        }
+
+        private void btnin_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

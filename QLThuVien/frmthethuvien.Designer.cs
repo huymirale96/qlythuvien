@@ -228,6 +228,7 @@
             this.btnin.TabIndex = 0;
             this.btnin.Text = "    In";
             this.btnin.UseVisualStyleBackColor = true;
+            this.btnin.Click += new System.EventHandler(this.btnin_Click);
             // 
             // btnluuttv
             // 
