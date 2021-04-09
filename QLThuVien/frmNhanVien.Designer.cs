@@ -77,10 +77,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Colonna MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(293, 10);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(405, 25);
+            this.label9.Size = new System.Drawing.Size(419, 29);
             this.label9.TabIndex = 7;
             this.label9.Text = "DANH MỤC DANH SÁCH NHÂN VIÊN";
             // 
@@ -199,6 +199,7 @@
             this.dgvttnv.Name = "dgvttnv";
             this.dgvttnv.Size = new System.Drawing.Size(632, 340);
             this.dgvttnv.TabIndex = 0;
+            this.dgvttnv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvttnv_CellContentClick);
             // 
             // label10
             // 

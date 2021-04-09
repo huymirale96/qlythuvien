@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 namespace QLThuVien
 {
@@ -52,6 +53,14 @@ namespace QLThuVien
             cnn.Open();
             nhanvien.Load(cmd.ExecuteReader());
             cnn.Close();
+            nhanvien.Columns.Add(new DataColumn("Tuoi", typeof(Int32)));
+            foreach (DataRow row in nhanvien.Rows)
+            {
+                Debug.WriteLine("date" + DateTime.Now.Year.ToString() + Int32.Parse(DateTime.Parse(row["NgaySinh"].ToString()).Year.ToString()) );
+                row["Tuoi"] = Int32.Parse(DateTime.Now.Year.ToString()) - Int32.Parse(DateTime.Parse(row["NgaySinh"].ToString()).Year.ToString()) ;
+                //need to set value to NewColumn column
+                Debug.WriteLine("tuoi " + row["Tuoi"]);
+            }
             return nhanvien;
         }
         private void loadnvlenluoi()
@@ -415,6 +424,11 @@ namespace QLThuVien
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvttnv_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
