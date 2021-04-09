@@ -74,7 +74,7 @@ namespace QLThuVien
             dgvttnv.Columns[0].HeaderText = "Mã SV";
             dgvttnv.Columns[1].HeaderText = "Tên SV";
             dgvttnv.Columns[2].HeaderText = "Ngày Sinh";
-            dgvttnv.Columns[3].HeaderText = "Ngày Vào Làm";
+            dgvttnv.Columns[3].HeaderText = "Tuoi";
             dgvttnv.Columns[4].HeaderText = "Giới Tính";
             dgvttnv.Columns[5].HeaderText = "Chức Vụ";
             dgvttnv.Columns[6].HeaderText = "Địa Chỉ";
@@ -431,6 +431,26 @@ namespace QLThuVien
         private void dgvttnv_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            //[sp_timTen]
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "sp_timTen";
+          
+            cmd.CommandType = CommandType.StoredProcedure;
+         
+            cmd.Connection = cnn;
+            cmd.Parameters.AddWithValue("@ten", textBox2.Text);
+            DataTable nhanvien = new DataTable();
+           
+            cnn.Open();
+            nhanvien.Load(cmd.ExecuteReader());
+            Debug.WriteLine("row " + nhanvien.Rows.Count + textBox2.Text);
+
+            dgvttnv.DataSource = nhanvien;
+            cnn.Close();
         }
     }
 }

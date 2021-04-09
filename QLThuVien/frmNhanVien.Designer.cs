@@ -66,6 +66,9 @@
             this.btndau = new System.Windows.Forms.Button();
             this.txtpage = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvttnv)).BeginInit();
@@ -214,6 +217,9 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.BackgroundImage = global::QLThuVien.Properties.Resources._1;
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.cboGioitinhnv);
             this.groupBox1.Controls.Add(this.dtngayvaolam);
             this.groupBox1.Controls.Add(this.dtpNgaysinhnv);
@@ -244,7 +250,7 @@
             this.cboGioitinhnv.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.cboGioitinhnv.Location = new System.Drawing.Point(127, 330);
+            this.cboGioitinhnv.Location = new System.Drawing.Point(134, 296);
             this.cboGioitinhnv.Name = "cboGioitinhnv";
             this.cboGioitinhnv.Size = new System.Drawing.Size(75, 21);
             this.cboGioitinhnv.TabIndex = 3;
@@ -252,7 +258,7 @@
             // dtngayvaolam
             // 
             this.dtngayvaolam.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtngayvaolam.Location = new System.Drawing.Point(127, 280);
+            this.dtngayvaolam.Location = new System.Drawing.Point(127, 255);
             this.dtngayvaolam.Name = "dtngayvaolam";
             this.dtngayvaolam.Size = new System.Drawing.Size(135, 20);
             this.dtngayvaolam.TabIndex = 2;
@@ -305,7 +311,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(20, 330);
+            this.label4.Location = new System.Drawing.Point(20, 296);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 13);
             this.label4.TabIndex = 0;
@@ -315,7 +321,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(20, 280);
+            this.label8.Location = new System.Drawing.Point(23, 254);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(77, 13);
             this.label8.TabIndex = 0;
@@ -447,6 +453,30 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(21, 326);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 4;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(21, 352);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 5;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(152, 324);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(159, 23);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Tim Theo ten";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
             // frmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -514,5 +544,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
